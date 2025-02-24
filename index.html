@@ -1,0 +1,54 @@
+​<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mess Expenses</title>
+    <link rel="stylesheet" href="styles.css">
+></head>
+<body>
+    <div class="container">
+        <h1>Mess Expenses Tracker</h1>
+
+        <div class="controls">
+            <label for="year-select">Year:</label>
+            <select id="year-select"></select>
+            <label for="month-select">Month:</label>
+            <select id="month-select"></select>
+        </div>
+
+        <div id="calendar-container">
+            <div id="calendar"></div>
+        </div>
+
+        <div id="selected-date-tab">Selected Date: <span id="selected-date">None</span></div>
+
+        <div id="expense-controls">
+            <h2>Add Expenses</h2>
+            <button data-expense="breakfast">Breakfast ₹15</button>
+            <button data-expense="lunch">Lunch ₹50</button>
+            <button data-expense="dinner">Dinner ₹50</button>
+            <button data-expense="fullDay">Full Day ₹115</button>
+        </div>
+
+        <div id="total-expenses-container">
+            <h3>Total Expenses: ₹<span id="total-expenses">0</span></h3>
+        </div>
+
+        <div id="notepad">
+            <h2>Notepad</h2>
+            <textarea id="note-input" placeholder="Write your notes here..."></textarea>
+            <button id="save-note">Save Note</button>
+            <button id="delete-note">Delete Note</button>
+        </div>
+
+        <div class="settings">
+            <button id="toggle-theme">Toggle Light/Dark Mode</button>
+            <button id="reset-expenses">Reset Expenses</button>
+            <button id="go-back">Go Back</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
