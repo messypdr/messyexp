@@ -1,0 +1,156 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f8f9fa;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+    overflow-x: hidden;
+}
+
+.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+/* Calendar Container */
+.container {
+    max-width: 420px; /* Reduced to fit screen properly */
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    background: white;
+    transition: background 0.3s, color 0.3s;
+    overflow: hidden;
+}
+
+.dark-mode .container {
+    background: #242424;
+}
+
+/* Controls Section */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+/* Calendar Grid */
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 days in a row */
+    gap: 5px;
+    padding: 10px;
+    background: #ececec;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.dark-mode #calendar {
+    background: #333;
+}
+
+/* Styling for Each Day (Perfect Squares) */
+.day {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    position: relative;
+    transition: 0.3s;
+}
+
+.dark-mode .day {
+    background: #3a3a3a;
+    border: 1px solid #666;
+}
+
+.day:hover {
+    background: #d9d9d9;
+}
+
+.dark-mode .day:hover {
+    background: #505050;
+}
+
+/* Highlight Selected Date */
+.selected-day {
+    background: #ffcc00 !important;
+    color: black;
+    border: 2px solid #d4a200;
+}
+
+/* Expense Display in Each Day */
+.expense-display {
+    position: absolute;
+    bottom: 5px;
+    font-size: 12px;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Expense Buttons */
+#expense-controls button {
+    padding: 8px 12px;
+    margin: 4px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+    background: #007bff;
+    color: white;
+}
+
+#expense-controls button:hover {
+    background: #0056b3;
+}
+
+/* Reset & Theme Toggle Button */
+#reset-expenses, #toggle-theme {
+    background: #6c757d;
+    color: white;
+}
+
+#reset-expenses:hover, #toggle-theme:hover {
+    background: #545b62;
+}
+
+.dark-mode #toggle-theme {
+    background: white;
+    color: black;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 12px;
+    margin: 4px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+}
+
+/* Responsive Fixes */
+@media (max-width: 480px) {
+    .day {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+    
+    .container {
+        max-width: 350px;
+        padding: 10px;
+    }
+}
